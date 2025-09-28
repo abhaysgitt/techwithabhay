@@ -1,7 +1,7 @@
 # 🌐 TechWithAbhay 
 My 1st personal **portfolio website** showcasing projects, skills, and experience, built to represent the professional profile of mine.
 
-Live Demo 👉 [Click Here](https://abhaygitt.github.io/techwithabhay/)  
+Live Demo 👉 [Click Here](https://abhaysgitt.github.io/techwithabhay/)  
 
 ---
 
