@@ -1,0 +1,311 @@
+import PCModel from "./PCModel";
+import { FaCode, FaChartLine, FaNetworkWired, FaServer, FaFileAlt, FaTachometerAlt, FaCogs, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaPython, FaLinux, FaPalette, FaBug } from 'react-icons/fa'
+import { SiRedis, SiPostgresql, SiTailwindcss, SiNextdotjs, SiTypescript, SiMongodb, SiReact, SiExpress, SiJavascript, SiPython, SiC, SiCplusplus, SiJava, SiMysql, SiGit, SiDocker, SiVercel, SiAws, SiFirebase, SiOpenai } from 'react-icons/si'
+import { info } from "../../../utils/info";
+import GridBackground from "@/components/ui/GridBackground";
+
+const About = ({ theme }) => {
+  return (
+    <>
+      <style jsx>{`
+        /* Scroll text */
+        @keyframes scrollTextInfinite {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(-50%);
+          }
+        }
+
+      
+
+        .scrolling-text {
+          animation: scrollTextInfinite 23.5s linear infinite;
+        }
+
+        
+
+        /* Hover: pause cả text và line */
+        .group:hover .scrolling-text{
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      <section  id="about" className={`relative py-10 min-h-screen ${   theme === "dark" ? '60a5fa' : '#2563eb' }`} >
+         <GridBackground theme={theme} colorScheme="pink" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 h-full flex flex-col justify-center">
+          <div className="text-center mb-16">
+            <h2
+              className={`text-4xl md:text-5xl font-bold mb-6 ${
+                theme === "dark"
+                  ? "text-white drop-shadow-lg"
+                  : "text-gray-900 drop-shadow-lg"
+              }`}
+            >
+              About Me
+            </h2>
+            <div
+              className={`w-24 h-1 mx-auto rounded-full ${
+                theme === "dark" ? "bg-blue-400" : "bg-blue-600"
+              }`}
+            />
+          </div>
+
+          <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
+            {/* Scrolling Card */}
+            <div className={`relative max-w-xl lg:max-w-none mx-auto h-96 sm:h-120 lg:h-160 rounded-lg shadow-2xl border overflow-hidden group 
+              ${  theme === 'dark'   ? 'bg-gray-900/60 border-blue-500/30 hover:border-blue-400/50'   : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+              {/* Top Scroll Bar */}
+              <div className={`absolute top-0 left-0 right-0 h-8 border-b flex items-center justify-center z-10 ${
+                theme === 'dark' ? 'bg-blue-900 border-blue-700/50' : 'bg-blue-100 border-blue-300/50' }`}>
+                <div className={`w-24 h-2 rounded-full shadow-inner border ${
+                  theme === 'dark' ? 'bg-gradient-to-r from-blue-400 to-blue-300 border-blue-200/30' : 'bg-gradient-to-r from-blue-500 to-blue-400 border-blue-300/50'}`}>
+                </div>
+                
+              </div>
+
+              {/* Bottom Scroll Bar */}
+              <div className={`absolute bottom-0 left-0 right-0 h-8 border-t flex items-center justify-center z-10 ${
+                theme === 'dark' ? 'bg-blue-900 border-blue-700/50' : 'bg-blue-100 border-blue-300/50' }`}>
+                <div className={`w-24 h-2 rounded-full shadow-inner border ${
+                  theme === 'dark' ? 'bg-gradient-to-r from-blue-400 to-blue-300 border-blue-200/30' : 'bg-gradient-to-r from-blue-500 to-blue-400 border-blue-300/50'}`}>
+                </div>
+              </div>
+
+              {/* Scrollable Content */}
+              <div className="relative pt-8 pb-8 overflow-hidden lined-background">
+                <div className="scrolling-text">
+                  
+                   <ContentBlock theme={theme} />
+                   <br />
+                   <ContentBlock theme={theme} />
+                </div>
+              </div>
+            </div>
+
+            {/* 3D Model - Responsive sizes */}
+            <div className="relative flex items-center justify-center mt-8 lg:mt-0 h-96 sm:h-120 md:h-144 lg:h-full w-full">
+              <PCModel />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+/* Tách phần nội dung ra để reuse */
+function ContentBlock({ theme }) {
+  return (
+    <>
+      <div className="px-8 py-4 text-left relative z-10">
+        <h1 className={`text-5xl mb-4 text-center ${ theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Abhay Kumar</span>
+        </h1>
+        <h3 className={`text-xl mb-6 text-center ${ theme === 'dark' ? 'text-blue-100' : 'text-blue-100' }`}>
+          abhaysingh19oct | (+91) 7835998969
+        </h3>
+        <h3 className={`text-xl mb-6 text-center ${ theme === 'dark' ? 'text-blue-100' : 'text-blue-100' }`}>
+          <a href={info.social.github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 transition-colors text-center ">
+              🔗 @{info.githubUsername} |
+            </a>
+          <a href={info.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 transition-colors text-center ">
+              🔗 @abhayslinkk |
+            </a>
+          <a href={info.social.twitter} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 transition-colors text-center ">
+              🔗 @abhaystwitt
+            </a>
+        </h3>
+        
+
+        
+        <div className={`space-y-4 text-sm mb-6 ${
+          theme === 'dark' ? 'text-gray-200' : 'text-gray-200' }`}>
+          {/* Skills */}
+          <div className={`rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${  theme === 'dark' ? ' border-blue-500/30 hover:border-blue-400/50' : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+            <div className="space-y-2">
+              <div className="flex items-center">
+               <FaPalette className={`text-2xl mr-2 ${theme === 'dark' ? 'text-purple-600' : 'text-blue-600'}`} />
+               <h3 className={`text-lg  ${theme === 'dark' ? 'text-purple-600' : 'text-blue-800'}`}>SKILLS</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-base mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Programming Languages </h3>
+             </div>
+             <div className="flex items-center">
+               <h3 className={`text-sm ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>:  C | C++ | Python | JavaScript</h3>
+             </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-lg mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Libraries & Frameworks</h3>
+               <h3 className={`text-sm ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>:  React.js | Node.js | Express.js</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-lg mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Database & Backend</h3>
+               <h3 className={`text-sm ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>:  MongoDB | RESTful APIs</h3>
+             </div>
+
+             <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Tools & Platforms</h3>
+               <h3 className={`text-l ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>:  Git | GitHub | Postman</h3>
+             </div>
+
+             <div className="flex items-center">
+               <h3 className={`text-lg mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Core Concepts</h3>
+               <h3 className={`text-sm ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>:  DSA | OOP | System Design</h3>
+             </div>
+
+             <div className="flex items-center">
+               <h3 className={`text-lg mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Miscellaneous</h3>
+               <h3 className={`text-sm ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>:  Problem Solving | Debugging</h3>
+             </div>
+            </div>
+          </div>
+          
+          {/* education */}
+          <div className={`rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${  theme === 'dark' ? ' border-blue-500/30 hover:border-blue-400/50' : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+            <div className="space-y-2">
+              <div className="flex items-center">
+               <FaPalette className={`text-2xl mr-2 ${theme === 'dark' ? 'text-pink-600' : 'text-blue-600'}`} />
+               <h3 className={`text-xl ${theme === 'dark' ? 'text-pink-600' : 'text-blue-800'}`}>EDUCATION</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>TECHNO MAIN SALT LAKE (TMSL) `</h3>
+               <h3 className={`text-l font-bold ${theme === 'dark' ? 'text-pink-200' : 'text-blue-800'}`}> (Aug 2024 - Jun 2028)</h3>
+             </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-l mr-1 ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>Btech, Computer Science | GPA: 8.00/10 </h3>
+              </div>
+            </div>
+          </div>
+
+          {/* EXPERIENCE */}
+          <div className={`rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${  theme === 'dark' ? ' border-blue-500/30 hover:border-blue-400/50' : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+            <div className="space-y-2">
+              <div className="flex items-center">
+               <FaPalette className={`text-2xl mr-2 ${theme === 'dark' ? 'text-green-500' : 'text-blue-600'}`} />
+               <h3 className={`text-xl ${theme === 'dark' ? 'text-green-500' : 'text-blue-800'}`}>EXPERIENCE</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>SOFTWARE ENGINEER INTERN | Cal.com  ` </h3>
+               <h3 className={`text-l ${theme === 'dark' ? 'text-green-200' : 'text-blue-800'}`}> (jun 26 - jul 26)</h3>
+             </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-l mr-1 ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>React.js | Node.js | Express.js | MongoDB | RESTful APIs</h3>
+              </div>
+            </div>
+          </div>
+
+
+
+          {/* PROJECTS */}
+          <div className={`rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${  theme === 'dark' ? ' border-blue-500/30 hover:border-blue-400/50' : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+            <div className="space-y-2">
+              <div className="flex items-center">
+               <FaPalette className={`text-2xl mr-2 ${theme === 'dark' ? 'text-purple-500' : 'text-blue-600'}`} />
+               <h3 className={`text-xl ${theme === 'dark' ? 'text-purple-500' : 'text-blue-800'}`}>PROJECTS</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>PROJECT1 | Cal.com  ` </h3>
+               <h3 className={`text-l ${theme === 'dark' ? 'text-purple-200' : 'text-blue-800'}`}> (jun 26 - jul 26)</h3>
+             </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-l mr-1 ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>React.js | Node.js | Express.js | MongoDB | RESTful APIs</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* HONORS & AWARDS */}
+          <div className={`rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${  theme === 'dark' ? ' border-blue-500/30 hover:border-blue-400/50' : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+            <div className="space-y-2">
+              <div className="flex items-center">
+               <FaPalette className={`text-2xl mr-2 ${theme === 'dark' ? 'text-pink-600' : 'text-blue-600'}`} />
+               <h3 className={`text-xl ${theme === 'dark' ? 'text-pink-600' : 'text-blue-800'}`}>HONORS & AWARDS</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>SCHOLARSHIP</h3>
+               <h3 className={`text-l font-bold ${theme === 'dark' ? 'text-pink-200' : 'text-blue-800'}`}> (Award)</h3>
+             </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-l mr-1 ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>Upcomming | Upcomming | Upcomming</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* COURSEWORK */}
+          <div className={`rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${  theme === 'dark' ? ' border-blue-500/30 hover:border-blue-400/50' : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+            <div className="space-y-2">
+              <div className="flex items-center">
+               <FaPalette className={`text-2xl mr-2 ${theme === 'dark' ? 'text-green-600' : 'text-blue-600'}`} />
+               <h3 className={`text-xl ${theme === 'dark' ? 'text-green-600' : 'text-blue-800'}`}>COURSEWORK</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>PROBLEM SOLVING</h3>
+               <h3 className={`text-l font-bold ${theme === 'dark' ? 'text-green-200' : 'text-blue-800'}`}> (AI-driven user-centric products)</h3>
+             </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-l mr-1 ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>DATA STRUCTURE & ALGORITHM | BACKEMD DEVELOPMENT </h3>
+              </div>
+              <div className="flex items-center">
+               <h3 className={`text-l mr-1 ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>MACHINE-LEARNING | DEEP-LEARNING | GEN-AI</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* OTHERS */}
+          <div className={`rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${  theme === 'dark' ? ' border-blue-500/30 hover:border-blue-400/50' : 'bg-white/80 border-blue-300/50 hover:border-blue-500/70' }`}>
+            <div className="space-y-2">
+              <div className="flex items-center">
+               <FaPalette className={`text-2xl mr-2 ${theme === 'dark' ? 'text-purple-600' : 'text-blue-600'}`} />
+               <h3 className={`text-xl  ${theme === 'dark' ? 'text-purple-600' : 'text-blue-800'}`}>OTHERS</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Tech Passion</h3>
+               </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-l ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>Focused on building scalable AI-driven web apps & Deeply passionate about learning new technologies and continually enhancing my skills.</h3>
+              </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-xl mr-1 ${theme === 'dark' ? 'text-blue-500' : 'text-blue-800'}`}>Always seeking</h3>
+               </div>
+
+              <div className="flex items-center">
+               <h3 className={`text-l ${theme === 'dark' ? 'text-blue-100' : 'text-blue-800'}`}>looking for opportunities to collaborate with other professionals and organizations that share my vision and nurture my passion for programming and values of creating impactful and user-centric products.</h3>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact & Social */}
+      
+
+
+      {/* GitHub Stats */}
+    
+      {/* Fun Fact */}
+      
+    </>
+  );
+};
+
+export default About;
