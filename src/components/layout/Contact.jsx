@@ -131,7 +131,7 @@ export default function Contact({ theme }) {
                                             setIsSubmitting(true);
                                             setSubmitMessage('');
 
-                                            const formattedMessage = `Dear Quốc Việt,\n\n${formData.message}\n\nBest regards,\n${formData.name}`;
+                                            const formattedMessage = `Dear Abhay Kr.,\n\n${formData.message}\n\nBest regards,\n${formData.name}`;
                                             const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(formattedMessage)}`;
                                             window.open(mailtoLink);
 
