@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, FileTextIcon } from "lucide-react";
 
 export const DATA = {
   name: "Abhay kumar",
@@ -50,6 +50,11 @@ export const DATA = {
       icon: NotebookIcon,
       label: "Blog",
     },
+    {
+  href: "https://drive.google.com/file/d/1l3lQSh8OQ5dX_7730BGr0FNpevnBLcCO/view?usp=drive_link",
+  icon: FileTextIcon, // better suited for Resume
+  label: "Resume",
+},
   ],
   contact: {
     email: "abhaysingh19oct@gmail.com",
