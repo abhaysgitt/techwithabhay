@@ -135,7 +135,7 @@ export default function Page() {
                 </h2>
                <p className="text-sm text-muted-foreground">
                  I’ve worked on several projects that strengthened my development and problem-solving skills. Here are some of the highlights.{" "}
-                 <Link href="#projects" className="text-blue-500 hover:underline">
+                 <Link href={DATA.contact.social.GitHub.url} className="text-blue-500 hover:underline">
                     here github
                   </Link>
                </p>
