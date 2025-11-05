@@ -4,6 +4,7 @@ import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
+import { OpenSourceCard } from "@/components/open-source-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -164,7 +165,48 @@ export default function Page() {
           </div>
         </div>
       </section>
-
+      <section id="opensource">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+                  Open Source
+                </div>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">
+                  Check out my latest open source work
+                </h2>
+               <p className="text-sm text-muted-foreground">
+                 I’ve contributed to several open source projects that allowed me to collaborate with global developers, enhance real-world software, and give back to the community. Here are some of the highlights.{" "}
+                 <Link href={DATA.contact.social.GitHub.url} className="text-blue-500 hover:underline">
+                    here github
+                  </Link>
+               </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.opensource.map((opensource, id) => (
+              <BlurFade
+                key={opensource.title}
+                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+              >
+                <OpenSourceCard
+                  href={opensource.href}
+                  key={opensource.title}
+                  title={opensource.title}
+                  description={opensource.description}
+                  dates={opensource.dates}
+                  tags={opensource.technologies}
+                  image={opensource.image}
+                  video={opensource.video}
+                  links={opensource.links}
+                />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="freelance">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
@@ -205,7 +247,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-      
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -245,7 +286,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-
+      
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

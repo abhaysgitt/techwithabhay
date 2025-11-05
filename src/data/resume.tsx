@@ -55,6 +55,7 @@ export const DATA = {
   icon: FileTextIcon, // better suited for Resume
   label: "Resume",
 },
+
   ],
   contact: {
     email: "abhaysingh19oct@gmail.com",
@@ -187,6 +188,54 @@ export const DATA = {
         },
       ],
       image: "/Portfolio.png",
+      video: "",
+    },
+  ],
+
+  opensource: [
+    {
+      title: "Upcomming",
+      href: "https://techwithabhay.vercel.app/",
+      dates: "January 2025",
+      active: true,
+      description:
+        "upcomming | upcomming | upcomming",
+      technologies: [
+        "ReactJS",
+        "Typescript",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://techwithabhay.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/diligence-landing.png",
+      video: "",
+    },
+    {
+      title: "Upcomming",
+      href: "https://techwithabhay.vercel.app/",
+      dates: "January 2026",
+      active: true,
+      description:
+        "upcomming | upcomming | upcomming",
+      technologies: [
+        "Next.js",
+        "ReactJS",
+        "Typescript",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://techwithabhay.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/nftech-landing.png",
       video: "",
     },
   ],
