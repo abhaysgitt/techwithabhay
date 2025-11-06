@@ -90,7 +90,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "mailto:abhaysingh19oct@gmail.com@gmail.com",
+        url: "mailto:abhaysingh19oct@gmail.com",
         icon: Icons.email,
 
         navbar: true,
@@ -316,12 +316,12 @@ export const DATA = {
 
   hackathons: [
     {
-      title: "SIH Hackathon",
+      title: "UPCOMMING",
       dates: "September 2025",
-      location: "Kolkata, India",
+      location: "India",
       description:
-        "Developed a web application.",
-      image: "Smart-India-Hackathon-2023.png",
+        "upcomming | upcomming | upcomming",
+      image: "octocat.png",
       links: [
         {
           title: "Source",
@@ -337,7 +337,13 @@ export const DATA = {
       description:
         "upcomming | upcomming | upcomming",
       image: "sparkhack.png",
-      links: [],
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/abhaysgitt",
+        },
+      ],
     },
 
   ],
