@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+  import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -60,7 +61,34 @@ export default function Page() {
                </p>
         </BlurFade>
       </section>
-     
+     {/* <section id="podcast">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <div className="space-y-3">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                Podcast I got featured on
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                My Coding Journey
+              </h2>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Click the link below to listen to my podcast episode{" "}
+              </p>
+              <div className="mx-auto aspect-video">
+                <iframe
+                  className="w-[90vw] sm:w-[85vw] md:w-[75vw] lg:w-[70vw] xl:w-[70vw] h-full rounded-[20px]"
+                  src="https://www.youtube.com/embed/5mhevdwXuJM?si=-Nww4qpdNBhi1aqz"
+                  title="YouTube video player"
+                  // frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </BlurFade>
+        </div>
+      </section> */}
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -310,20 +338,55 @@ export default function Page() {
           <Calcom />
         </BlurFade>
       </section>
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-1 w-full py-1">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
-                techwithabhay
-              </div>
-              <p className="text-sm text-muted-foreground">
-                © 2025 techwithabhay. All rights reserved.
-              </p>
-            </div>
-          </BlurFade>
+    
+
+<section id="contact">
+  <div className="grid items-center justify-center gap-4 px-4 text-center md:px-1 w-full py-4">
+    <BlurFade delay={BLUR_FADE_DELAY * 16}>
+      <div className="space-y-3">
+        <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+          techwithabhay
         </div>
-      </section>
+
+        {/* Social Links */}
+        <div className="flex justify-center items-center gap-6 text-2xl text-muted-foreground">
+          <a
+            href="https://github.com/abhaysgitt"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hover:text-foreground transition-colors"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://linkedin.com/in/abhayslinkk"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="hover:text-foreground transition-colors"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://twitter.com/abhaystwitt"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Twitter)"
+            className="hover:text-foreground transition-colors"
+          >
+            <FaXTwitter />
+          </a>
+        </div>
+
+        <p className="text-sm text-muted-foreground">
+          © 2025 techwithabhay. All rights reserved.
+        </p>
+      </div>
+    </BlurFade>
+  </div>
+</section>
+
     </main>
   );
 }
