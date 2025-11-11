@@ -11,7 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-  import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -338,55 +337,20 @@ export default function Page() {
           <Calcom />
         </BlurFade>
       </section>
-    
-
-<section id="contact">
-  <div className="grid items-center justify-center gap-4 px-4 text-center md:px-1 w-full py-4">
-    <BlurFade delay={BLUR_FADE_DELAY * 16}>
-      <div className="space-y-3">
-        <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
-          techwithabhay
+      <section id="contact">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-1 w-full py-1">
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <div className="space-y-3">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+                techwithabhay
+              </div>
+              <p className="text-sm text-muted-foreground">
+                © 2025 techwithabhay. All rights reserved.
+              </p>
+            </div>
+          </BlurFade>
         </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center items-center gap-6 text-2xl text-muted-foreground">
-          <a
-            href="https://github.com/abhaysgitt"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="hover:text-foreground transition-colors"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://linkedin.com/in/abhayslinkk"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="hover:text-foreground transition-colors"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://twitter.com/abhaystwitt"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X (Twitter)"
-            className="hover:text-foreground transition-colors"
-          >
-            <FaXTwitter />
-          </a>
-        </div>
-
-        <p className="text-sm text-muted-foreground">
-          © 2025 techwithabhay. All rights reserved.
-        </p>
-      </div>
-    </BlurFade>
-  </div>
-</section>
-
+      </section>
     </main>
   );
 }
