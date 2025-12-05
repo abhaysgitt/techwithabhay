@@ -77,7 +77,7 @@ export function ProjectCard({
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-none font-sans text-[15px] leading-snug text-muted-foreground dark:text-neutral-300 dark:prose-invert prose-p:my-1 prose-headings:font-semibold prose-headings:mb-1 prose-headings:text-foreground prose-a:text-primary prose-a:no-underline hover:prose-a:underline text-pretty">
             {description}
           </Markdown>
         </div>
@@ -87,7 +87,7 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[10px]"
+                className="px-1 py-0 text-[12px]"
                 variant="secondary"
                 key={tag}
               >
