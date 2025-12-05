@@ -24,7 +24,7 @@ export default function Page() {
               
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
+                className="text-2xl font-bold tracking-tighter base:text-5xl xl:text-5xl/none"
                 yOffset={8}
                 text={`${DATA.name}`}
               />
@@ -48,18 +48,18 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-2xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <p className="text-sm text-muted-foreground">
-                 I’m a passionate Computer Science undergrad Focused on building scalable {" "}
-                 <Link href="#projects" className="text-blue-500 hover:underline">
-                    AI-driven products {" "}
-                  </Link>
-                  & Deeply passionate about learning new technologies and continually enhancing my skills. looking for opportunities to collaborate with other professionals and organizations that share my vision and nurture my passion for programming and values of creating impactful and user-centric products.{" "}
-               </p>
+          <div className="mt-3 rounded-2xl border border-black/10 bg-white px-2 py-20 md:px-4 md:py-3 dark:border-white/10 dark:bg-black/40">
+          <Markdown className="prose max-w-none font-sans text-[15px] leading-snug text-black prose-p:my-1 prose-headings:font-semibold prose-headings:mb-1 prose-headings:text-black prose-a:text-primary prose-a:no-underline hover:prose-a:underline text-pretty dark:text-white dark:prose-invert dark:prose-headings:text-white">
+            {DATA.summary}
+          </Markdown>
+          </div>
         </BlurFade>
       </section>
+      
+      
      {/* <section id="podcast">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -91,12 +91,12 @@ export default function Page() {
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <h2 className="text-2xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge key={skill} className="text-[12px]">{skill}</Badge>
               </BlurFade>
             ))}
           </div>
@@ -155,13 +155,13 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 textbase font-bold">
                   My Projects
                 </div>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">
+                <h2 className="text-2xl font-bold tracking-tighter base:text-2xl">
                   Check out my latest work
                 </h2>
-               <p className="text-sm text-muted-foreground">
+               <p className="text-base text-muted-foreground">
                  I’ve worked on several projects that strengthened my development and problem-solving skills. Here are some of the highlights.{" "}
                  <Link href={DATA.contact.social.GitHub.url} className="text-blue-500 hover:underline">
                     here github
@@ -170,7 +170,7 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-full mx-auto">
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
@@ -197,13 +197,13 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-base font-bold">
                   Open Source
                 </div>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">
+                <h2 className="text-2xl font-bold tracking-tighter base:text-2xl">
                   Check out my latest open source work
                 </h2>
-               <p className="text-sm text-muted-foreground">
+               <p className="text-base text-muted-foreground">
                  I’ve contributed to several open source projects that allowed me to collaborate with global developers, enhance real-world software, and give back to the community. Here are some of the highlights.{" "}
                  <Link href={DATA.contact.social.GitHub.url} className="text-blue-500 hover:underline">
                     here github
@@ -212,7 +212,7 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-full mx-auto">
             {DATA.opensource.map((opensource, id) => (
               <BlurFade
                 key={opensource.title}
@@ -239,20 +239,23 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-base font-bold">
                   Freelance Work
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-2xl">
+                <h2 className="text-3xl font-bold tracking-tighter base:text-2xl">
                   Check out my latest freelance work
                 </h2>
-                <p className="text-sm text-muted-foreground">
-                  I’ve completed various freelance projects that allowed me to collaborate with clients and deliver real-world solutions. <Link href="#freelance" className="text-blue-500 hover:underline">here</Link> are some of the highlights.{" "}
+                <p className="text-base text-muted-foreground">
+                  I’ve completed various freelance projects that allowed me to collaborate with clients and deliver real-world solutions.{" "}
+                  <Link href={DATA.contact.social.GitHub.url} className="text-blue-500 hover:underline">
+                    here github
+                  </Link>
                   
                 </p>
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-full mx-auto">
             {DATA.freelance.map((freelance, id) => (
               <BlurFade
                 key={freelance.title}
@@ -279,38 +282,42 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
-                  Hackathons
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-base font-bold">
+                  Newsletter
                 </div>
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">
-                  I like building things
+                <h2 className="text-2xl font-bold tracking-tighter base:text-2xl">
+                  Check out my Newsletter
                 </h2>
-                <p className="text-sm text-muted-foreground">
-                  I’ve taken part in several hackathons that challenged my problem-solving and collaboration skills.  <Link href="#hackathons" className="text-blue-500 hover:underline">here</Link> are some of the highlights.{" "}
-                 
+                <p className="text-base text-muted-foreground">
+                My newsletter highlights my work and learning in Cloud technologies, DevOps practices, Kubernetes, open-source, and Cloud Native Insights..  <Link href="https://www.linkedin.com/newsletters/7400923199326064640/" className="text-blue-500 hover:underline">Explore Newsletter</Link>     
                 </p>
               </div>
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
+  <div className="max-w-full mx-auto rounded-xl border border-neutral-800 bg-black text-white shadow-md p-6">
+    <ul className="mb-4 ml-4 divide-y divide-dashed border-l border-neutral-600">
+      {DATA.hackathons.map((project, id) => (
+        <BlurFade
+          key={project.title + project.dates}
+          delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+        >
+          <HackathonCard
+            title={project.title}
+            description={project.description}
+            location={project.location}
+            dates={project.dates}
+            image={project.image}
+            links={project.links}
+          />
+        </BlurFade>
+      ))}
+    </ul>
+  </div>
+</BlurFade>
+
+
+
         </div>
       </section>
       
@@ -318,13 +325,13 @@ export default function Page() {
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-base font-bold">
                 Contact
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-2xl">
+              <h2 className="text-3xl font-bold tracking-tighter base:text-2xl">
                 Get in Touch
               </h2>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 I’m always open to connecting, collaborating, or discussing new opportunities. Feel free to reach out on <Link href={DATA.contact.social.X.url} className="text-blue-500 hover:underline">twitter</Link> and let’s create something amazing together.{" "}
                 
               </p>
@@ -337,14 +344,14 @@ export default function Page() {
           <Calcom />
         </BlurFade>
       </section>
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-1 w-full py-1">
+      <section id="contact" className="border-t border-border">
+        <div className="flex w-full flex-col items-center justify-center gap-4 px-4 py-6 text-center">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-bold">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-base font-bold">
                 techwithabhay
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 © 2025 techwithabhay. All rights reserved.
               </p>
             </div>
