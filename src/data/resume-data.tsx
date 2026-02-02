@@ -9,7 +9,7 @@ export const RESUME_DATA = {
     "Building scalable, production-ready cloud-native infrastructure. Experienced in designing, automating, and operating cloud platforms using Kubernetes and modern DevOps practices, with hands-on experience taking systems from early setup to reliable production environments. Actively engaged in open source and the CNCF ecosystem, with a strong focus on building infrastructure that is robust, efficient, and ready to scale.",
   avatarUrl: "/abhay.png",
   personalWebsiteUrl: "https://techwithabhay.vercel.app/",
-  resumeUrl: "https://drive.google.com/file/d/1l3lQSh8OQ5dX_7730BGr0FNpevnBLcCO/view",
+  resumeUrl: "https://drive.google.com/file/d/16kRIfo6L2ycz-s3ayUlYu_hne7vIfLVM/view",
   extendedBio: `
   
 ## My Journey in Cloud Engineering
