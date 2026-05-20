@@ -107,26 +107,6 @@ Feel free to reach out to discuss cloud-native systems, open-source collaboratio
       end: "Present",
       description: "Actively building and operating cloud-native infrastructure through hands-on self-learning and open-source involvement. Focused on Kubernetes, container orchestration, CI/CD, and infrastructure automation while following CNCF best practices for scalable and reliable systems.",
     },
-  {
-    company: "Cloud Automation Projects",
-    link: "https://github.com/abhaysgitt",
-    badges: ["Personal Projects"],
-    title: "Cloud Infrastructure Engineer",
-    start: "January 2026",
-    end: "Present",
-    description:
-      "Built cloud automation projects using Infrastructure as Code and CI/CD pipelines. Worked on provisioning, deployment workflows, and optimizing cloud resources for cost and performance.",
-  },
-  {
-    company: "Foundations in Software & Systems",
-    link: "https://github.com/abhaysgitt",
-    badges: ["Academic"],
-    title: "Software & Systems Engineering Trainee",
-    start: "January 2026",
-    end: "Present",
-    description:
-      "Developed a strong foundation in software engineering, Linux systems, and backend fundamentals, which later supported my transition into cloud engineering and DevOps practices.",
-  },
   ],
   open_source: [
     "https://github.com/kubernetes/kubernetes",
@@ -141,27 +121,6 @@ Feel free to reach out to discuss cloud-native systems, open-source collaboratio
     "https://github.com/helm/helm",
   ],
   publications: [
-    {
-    title:
-      "Foundations of Cloud-Native Infrastructure: Design Principles for Scalable Distributed Systems",
-    description:
-      "A research-oriented study of cloud-native infrastructure design, focusing on Kubernetes-based architectures, scalability trade-offs, and reliability considerations in modern distributed systems.",
-    publisher:
-      "AAAI 2026 | Independent Technical Research & Cloud-Native Community",
-    date: "2026",
-    status: "Self-Published",
-    websiteUrl: "https://www.cncf.io/",
-    resourceUrl: "https://app.slack.com/client/T08PSQ7BQ/D0A0KLPS75L",
-    citation: "_",
-    tags: [
-      "Cloud-Native Systems",
-      "Distributed Systems",
-      "Kubernetes",
-      "Scalability",
-      "Infrastructure Design"
-    ],
-    showLinks: true,
-  },
   {
     title:
       "Automation-Driven Infrastructure: Applying DevOps and IaC for Production-Grade Cloud Systems",
@@ -183,48 +142,6 @@ Feel free to reach out to discuss cloud-native systems, open-source collaboratio
     ],
     showLinks: false,
   },
-  {
-    title:
-      "Observability and Reliability in Cloud Platforms: Metrics, Logs, and System Behavior",
-    description:
-      "A structured analysis of observability practices in cloud-native platforms, focusing on metrics, logging, tracing, and their role in diagnosing failures and maintaining system reliability at scale.",
-    publisher:
-      "AAAI 2026 | Independent Research on Site Reliability Engineering",
-    date: "2026",
-    status: "Self-Published",
-    websiteUrl: "",
-    resourceUrl: "",
-    citation: "_",
-    tags: [
-      "Observability",
-      "Reliability Engineering",
-      "SRE",
-      "Monitoring",
-      "Cloud Operations"
-    ],
-    showLinks: false,
-  },
-  {
-    title:
-      "Platform Engineering and Internal Developer Platforms: Enabling Scalable Cloud Operations",
-    description:
-      "A research-focused overview of platform engineering concepts, examining how internal developer platforms improve developer experience, operational consistency, and scalability in cloud-native organizations.",
-    publisher:
-      "AAAI 2026 | Cloud-Native Systems & Platform Engineering Notes",
-    date: "2026",
-    status: "In Progress",
-    websiteUrl: "",
-    resourceUrl: "",
-    citation: "_",
-    tags: [
-      "Platform Engineering",
-      "Internal Developer Platforms",
-      "Cloud-Native",
-      "DevEx",
-      "Kubernetes"
-    ],
-    showLinks: false,
-  },
   ],
   achievements: [
   {
@@ -242,57 +159,6 @@ Feel free to reach out to discuss cloud-native systems, open-source collaboratio
       socialEmbed: {
         type: "twitter",
         embedId: "1996621888769142950",
-      },
-  },
-    {
-    title: "Hands-On Kubernetes Labs Using CNCF Ecosystem Tools",
-    date: "May 2025",
-    description:
-      "Built and tested multiple Kubernetes lab setups using tools from the CNCF ecosystem.",
-    fullDescription:
-      "Gained hands-on experience with Kubernetes by working on local and cloud-based lab setups, exploring core objects such as pods, services, and deployments, and understanding how CNCF tools fit into real-world cloud-native workflows.",
-    tags: ["Kubernetes", "CNCF", "Cloud Native"],
-    link: {
-        label: "View website",
-        href: "https://kubernetes.io/",
-      },
-      socialEmbed: {
-        type: "linkedin",
-        embedId: "7400923199326064640",
-      },
-  },
-  {
-    title: "Built Cloud-Native Practice Projects Following CNCF Principles",
-    date: "June 2025",
-    description:
-      "Developed small cloud-native practice projects following CNCF-recommended patterns and best practices.",
-    fullDescription:
-      "Designed and implemented practice projects using containers, Kubernetes manifests, and basic CI/CD concepts, focusing on reproducibility, scalability, and alignment with CNCF cloud-native principles.",
-    tags: ["Cloud Native", "CNCF", "DevOps"],
-    link: {
-        label: "View website",
-        href: "https://kubernetes.io/",
-      },
-      socialEmbed: {
-        type: "linkedin",
-        embedId: "7400923199326064640",
-      },
-  },
-  {
-  title: "Applied CNCF Best Practices in Kubernetes Configuration & Deployment",
-  date: "June 2025",
-  description:
-    "Applied CNCF-recommended practices while configuring and deploying containerized workloads on Kubernetes.",
-  fullDescription:
-    "Worked with Kubernetes manifests and deployment configurations following CNCF cloud-native guidelines, focusing on reproducibility, configuration management, and basic operational readiness for containerized applications.",
-  tags: ["CNCF", "Kubernetes", "Cloud Native"],
-  link: {
-        label: "View website",
-        href: "https://kubernetes.io/",
-      },
-      socialEmbed: {
-        type: "linkedin",
-        embedId: "7400923199326064640",
       },
   },
   ],
@@ -446,37 +312,13 @@ If you’re interested in cloud-native systems, DevOps practices, or open-source
 },
   ],
   skills: [
-  "Cloud Platforms: AWS & Azure fundamentals, networking, IAM, cost-aware infrastructure",
-  "Containers & Kubernetes: Docker, Kubernetes basics, workload orchestration, cluster fundamentals",
-  "Cloud Native & CNCF: Cloud-native architecture principles, Kubernetes ecosystem basics, configuration & service discovery",
-  "DevOps & Automation: CI/CD pipelines, Infrastructure as Code concepts, automated deployments",
-  "Observability & Reliability: Metrics, logs, tracing, monitoring stacks, reliability-focused system design",
-  "Linux & Systems: Linux administration, process & networking basics, shell scripting",
-  "Programming & Scripting: Python for automation & tooling, Bash scripting, Go (basic awareness)",
-  "Version Control & Open Source: Git, GitHub workflows, pull requests, issue tracking, OSS collaboration",
-  "Security Fundamentals: Secrets management, least-privilege access, secure cloud deployments"
+  "Languages: Python, Bash, Go, JavaScript, TypeScript",
+  "Lib/Frameworks: Node, Express, flask, Docker, Kubernetes",
+  "Tools: Git, GitHub, Terraform, Ansible, Helm, Jenkins, GitHub Actions, Argo CD, Prometheus, Grafana",
+  "Platforms: AWS, Azure, Linux",
+  "Databases: MySQL, MongoDB, Cloud Databases",
   ],
   researchProjects: [
-    {
-    title: "Kubernetes Resource Monitoring Lab",
-    techStack: ["Kubernetes", "Docker", "Prometheus", "Grafana"],
-    description:
-      "Designed a small-scale monitoring setup to study resource usage and behavior of containerized workloads on Kubernetes using metrics and dashboards.",
-    link: {
-      label: "github.com",
-      href: "https://github.com/abhaysgitt/kubernetes",
-    },
-  },
-  {
-    title: "CI/CD Pipeline Evaluation for Cloud-Native Applications",
-    techStack: ["GitHub Actions", "Docker", "Linux", "CI/CD"],
-    description:
-      "Built and evaluated a basic CI/CD pipeline to understand build, test, and deployment workflows for containerized applications in cloud-native environments.",
-    link: {
-      label: "github.com",
-      href: "https://github.com/abhaysgitt/grafana",
-    },
-  },
   {
     title: "Infrastructure as Code Learning Project",
     techStack: ["Terraform", "AWS", "Linux", "Cloud Networking"],
@@ -509,15 +351,6 @@ If you’re interested in cloud-native systems, DevOps practices, or open-source
       href: "https://github.com/abhaysgitt/grafana",
     },
   },
-  {
-    title: "Infrastructure Automation Lab using Infrastructure as Code",
-    techStack: ["Terraform", "AWS", "Linux", "Cloud Networking"],
-    description:
-      "Explored Infrastructure as Code concepts by provisioning and managing simple cloud resources, emphasizing repeatability, automation, and cost-aware infrastructure setup.",
-    link: {
-      label: "github.com",
-      href: "https://github.com/abhaysgitt/vcluster",
-    },
   },
   ],
   extraCurricular: [
