@@ -351,7 +351,6 @@ If you’re interested in cloud-native systems, DevOps practices, or open-source
       href: "https://github.com/abhaysgitt/grafana",
     },
   },
-  },
   ],
   extraCurricular: [
     {
